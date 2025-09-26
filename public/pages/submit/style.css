@@ -1,0 +1,53 @@
+.newsletter__card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  width: 60vh;
+  border-radius: 15px;
+  height: 65vh;
+  padding: 20px;
+}
+
+.newsletter__image {
+  width: 60px;
+  position: relative;
+  left: 30px;
+  top: 30px;
+}
+
+.newsletter__content {
+  text-align: center;
+}
+
+.newsletter__content h2 {
+  font-size: calc(45px + 0.390625vw);
+}
+
+.newsletter__content p {
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .newsletter__card {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    justify-content: center;
+  }
+
+  .newsletter__image {
+    width: 80px;
+  }
+
+  .newsletter__button {
+    width: 60%;
+  }
+
+  .newsletter__content {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 25px;
+  }
+}
