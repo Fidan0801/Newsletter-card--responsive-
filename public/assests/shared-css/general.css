@@ -1,7 +1,7 @@
 body {
-  background-color: darkslateblue;
+  background-color: rgb(36, 33, 57);
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .align--center {
@@ -16,9 +16,13 @@ body {
   padding: 10px;
   border: 1px solid gray;
   border-radius: 5px;
-  width: 22vw;
-  background-color: darkslateblue;
+  width: calc(22vw + 0.390625vw);
+  min-width: fit-content;
+  white-space: nowrap;
+  background-color: rgb(36, 33, 57);
   color: white;
+  margin: 0 auto;
+  font-size: calc(8px + 0.390625vw);
 }
 
 .newsletter__content {

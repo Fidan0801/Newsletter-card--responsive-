@@ -1,62 +1,87 @@
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
 .newsletter__card {
   display: flex;
   background-color: white;
   align-items: center;
-  gap: 10px;
-  width: 60vw;
-  border-radius: 10px;
+  /* gap: 10px; */
+  /* width: 50vw; */
+  border-radius: 30px;
   padding: 20px;
   margin: 0 auto;
 }
 
 .newsletter__image {
   height: -webkit-fill-available;
-  width: calc(490px + 0.390625vw);
+  width: calc(350px + 0.390625vw);
 }
 
 .newsletter__input {
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
 }
 
 .newsletter__list {
-  padding: 20px;
+  list-style: none;
+}
+
+.newsletter__content {
+  margin: 0 auto;
+}
+.newsletter__list li::before {
+  content: url(../../assests/images/icons8-check-20.png);
+  margin-right: 10px;
+  position: relative;
+  top: 4px;
 }
 
 .newsletter__content h2 {
-  font-size: calc(35px + 0.390625vw);
+  font-size: calc(42px + 0.390625vw);
+  white-space: nowrap;
 }
 
 .newsletter__content > * {
-  font-size: calc(12px + 0.390625vw);
+  font-size: calc(8px + 0.390625vw);
+  width: 90%;
 }
 
 input {
   font: inherit;
-  width: 22vw;
+  width: calc(22vw + 0.390625vw);
+  min-width: 191px;
   border: 1px solid gray;
   border-radius: 5px;
   padding: 10px;
   margin: 15px 0;
 }
 
-@media (max-width: 860px) {
-
+@media (max-width: 768px) {
   .newsletter__card {
     flex-direction: column;
     gap: 50px;
     padding: 0;
     border-radius: 0;
     height: 100vh;
+    /* width: 80%; */
     width: 100%;
   }
 
   .newsletter__image {
     order: 1;
     width: 100%;
-    border-radius: 0;
+    border-radius: none;
     margin: 0;
     height: 45vh;
+  }
+
+  img {
+    border-radius: 0;
   }
 
   .newsletter__content {
@@ -66,10 +91,29 @@ input {
 
   .newsletter__button,
   input {
-    width: 80vw;
+    width: 60vw;
     height: 6vh;
   }
 
 }
 
+/* @media (max-width: 576px) {
+  .newsletter__card {
+    width: 100%;
+  }
+} */
 
+@media (max-width: 330px) {
+  .newsletter__content h2 {
+    /* font-size: calc(35px + 0.390625vw); */
+    font-size: 35px;
+  }
+
+  .newsletter__content {
+    margin: 0 30px;
+  }
+
+  input {
+    min-width: 155px;
+  }
+}
